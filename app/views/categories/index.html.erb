@@ -1,0 +1,11 @@
+<h1>INDEX</h1>
+
+<% flash.each do |name, msg| -%>
+  <%= content_tag :div, msg, class: "#{name}" %>
+<% end -%>
+
+<% @categories.each do |c|%>
+<p><%= c.name %></p>
+<p><%= c.icon %></p>
+<%end%>
+<%= link_to "Add Category", new_category_path%>
