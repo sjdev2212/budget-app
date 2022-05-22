@@ -5,7 +5,7 @@
 <% end -%>
 
 <% @categories.each do |c|%>
-<p><%= c.name %></p>
-<p><%= c.icon %></p>
+<p><%=  c.name %></p>
+<p><%= link_to c.icon, category_expenses_path(c.id) %></p>
 <%end%>
 <%= link_to "Add Category", new_category_path%>

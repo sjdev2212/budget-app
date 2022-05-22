@@ -1,0 +1,14 @@
+<h1> ALL EXPENSES!</h1>
+
+<% @expenses.each do |ex|%>
+<% if ex.name.nil?%>
+<span><%= 'Nothing to show yet!'%></span>
+<%else%>
+<span><%= ex.name %></span>
+<span><%= ex.amount %></span>
+<%end%>
+
+<% end%>
+
+
+<%= link_to "Add Expense", new_category_expense_path %>

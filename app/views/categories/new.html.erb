@@ -7,16 +7,19 @@
 <%= form_with model: @category, url: categories_path do |f| %>
 
     <div class="form-group">
-
-      <%= f.label :name, "Name" %>
-      <%= f.text_field :name %>
-</div>
-     <div>
-      <%= f.label :icon, "Icon" %>
-      <%= f.text_field :icon %>
+      <div class="field">
+      <%= f.text_field :name, placeholder: "Category name"%>
     </div>
+
+      <div class="field">
+          <%= f.label "Icon type" %>
+          <%= f.collection_select :icon, Category::ICONS, :to_s, :humanize %>
+        </div>
+
+</div>
+
     <%= f.submit "Save"%>
-        
+
 
 
 <% end %>
