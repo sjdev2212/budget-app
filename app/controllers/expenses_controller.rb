@@ -1,29 +1,28 @@
 class ExpensesController < ApplicationController
   def index
-    @expenses = Expense.where(user_id: current_user.id)
-    # @cat = @expenses.category_id
+    @expenses = Expense.all.where(user_id: current_user.id)
+
+  end
+  def show
+     @expense = Expense.find(params[:id])
   end
   def new
     @expense = Expense.new
   end
   def create
-    # expense  = current_user.categories.expenses.new(exp_params)
-@current_user = User.find(params[:user_id])
-@user_id = params[:user_id]
-@cat_id = params[:category_id]
-expense = Expense.new(exp_params.merge(user_id: @current_user.id, category_id: @cat_id))
-    if expense.save
-  redirect_to category_expenses_path
-  flash[:success] = 'Expense added!'
+    @new_expense = Expense.new(exp_params)
+
+if @new_expense.save
+  redirect_to category_path(id: params[:category_id]), notice: 'Transaction successfully added'
 else
-  redirect_to   new_category_expense_path
-  flash[:error] = 'ERROR! Expense was not added.'
+  render :new, alert: 'Oops, Something went wrong'
 end
+
   end
 
   private
   def exp_params
-  params.require(:expense).permit(:name, :amount)
+  params.require(:expense).permit(:name, :amount, :user_id,:category_id )
   end
 
 

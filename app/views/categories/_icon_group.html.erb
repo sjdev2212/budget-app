@@ -1,0 +1,14 @@
+
+<div >
+  <div >
+    <%case category.icon %>
+      <%when "entertainment"%>
+        <div >
+          <%=image_tag "theater.svg",size: "50x50" %>
+        </div>
+      <%when "transportation"%>
+        <div >
+          <%=image_tag "repairs.svg" ,size: "50x50"%>
+        </div>
+
+    <% end %>

@@ -1,1 +1,15 @@
 <h1>SHOW CATEGORY</h1>
+<%= @category.name%>
+
+
+<div >
+      <% @category.expenses.order(created_at: :desc).each do |ex| %>
+        <%= ex.name%>
+        <%= ex.created_at.strftime("%d %B, %Y") %>
+          <%= ex.amount%>
+
+      <% end %>
+
+
+
+<%= link_to "Add Expense", new_category_expense_path(@category.id) %>

@@ -1,11 +1,15 @@
-<h1>INDEX</h1>
+<h1>INDEX</h1>  <%= button_to "Sign Out",  destroy_user_session_path,method: :delete%>
 
 <% flash.each do |name, msg| -%>
   <%= content_tag :div, msg, class: "#{name}" %>
-<% end -%>
+<% end %>
 
-<% @categories.each do |c|%>
-<p><%=  c.name %></p>
-<p><%= link_to c.icon, category_expenses_path(c.id) %></p>
-<%end%>
-<%= link_to "Add Category", new_category_path%>
+
+
+<div >
+    <% @categories.includes(:expenses).each do |category| %>
+      <%= render 'icon_group', category: category %>
+      <%= link_to category.name, category_path(category.id) %>
+    <% end %>
+  </div>
+   <%= link_to "Add Category", new_category_path%>

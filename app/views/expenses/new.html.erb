@@ -2,19 +2,21 @@
   <%= content_tag :div, msg, class: "#{name}" %>
 <% end -%>
 <h1> Add Expense</h1>
-<%= form_with model: @expense, url: new_category_expense_path do |f| %>
+  <%=form_with(model: @expense, url: category_expenses_path, method: :post, local: true) do |f| %>
 
     <div class="form-group">
-      <div class="field">
+
       <%= f.text_field :name, placeholder: "Expense name"%>
     </div>
 
-      <div class="field">
+      <div>
           <%= f.label "Amount" %>
           <%= f.number_field :amount, placeholder: "Enter Amount"%>
         </div>
+        <%= f.hidden_field :user_id, value: current_user.id %>
+        <%= f.hidden_field :category_id, value: params[:category_id] %> 
 
-</div>
+
 
     <%= f.submit "Save"%>
 
