@@ -19,8 +19,18 @@
   justify-content: center;
   margin-top: 90px;
   font-family: 'Montserrat', sans-serif;
-  font-size: 30px;
+  font-size: 22px;
   color: #434b54;
+  font-weight: 400;
+  text-shadow: 2px -1px 5px #4f5255;
+}
+.or-title {
+  display: flex;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 17px;
+  color: #434b54;
+  font-weight: 400;
   text-shadow: 2px -1px 5px #4f5255;
 }
 
