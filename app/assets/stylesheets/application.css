@@ -1,15 +1,112 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 2px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.main-title {
+  display: flex;
+  justify-content: center;
+  margin-top: 130px;
+  font-family: 'Lobster', cursive;
+  font-size: 50px;
+  color: #434b54;
+  text-shadow: 2px -1px 5px #4f5255;
+}
+.log-title {
+  display: flex;
+  justify-content: center;
+  margin-top: 90px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  color: #434b54;
+  text-shadow: 2px -1px 5px #4f5255;
+}
+
+.log-btn {
+  box-shadow: inset 0 1px 0 0 #a4e271;
+  background: linear-gradient(to bottom, #0057ff 5%, #5b84d1 100%);
+  background-color: #89c403;
+  border-radius: 6px;
+  border: 1px solid #888c89;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 20px 16px;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #528009;
+}
+
+.log-btn:hover {
+  background: linear-gradient(to bottom, #888c89 5%, #888c89 100%);
+  background-color: #888c89;
+}
+
+.log-btn:active {
+  position: relative;
+  top: 1px;
+}
+
+.home-btn {
+  display: flex;
+  flex-direction: column;
+  margin-top: 250px;
+}
+
+.log-sign-btn {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  width: 93%;
+
+}
+
+.sign-btn {
+  box-shadow: inset 0 1px 0 0 #a4e271;
+  background: linear-gradient(to bottom, #fff 5%, #fff 100%);
+  background-color: #89c403;
+  border-radius: 6px;
+  border: 1px solid #888c89;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  color: #888c89;
+  font-family:   font-family: 'Montserrat', sans-serif;;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 20px 16px;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #528009;
+}
+
+.sign-btn:hover {
+  background: linear-gradient(to bottom, #0057ff 5%, #888c89 100%);
+  background-color: #77a809;
+}
+
+.log-sign:active {
+  position: relative;
+  top: 1px;
+}
+form {
+  box-sizing: border-box;
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: hsl(0, 0%, 100%);
+  border: 4px solid hsl(0, 0%, 90%);
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  display: flex
+}
+.form-field {
+  width: 90%;
+  height: 1.8rem;
+}
