@@ -1,14 +1,17 @@
+<nav class="navbar"> 
+<span class="or-title cat-title">Add Category</span>
 
+  </nav> 
 
 <% flash.each do |name, msg| -%>
   <%= content_tag :div, msg, class: "#{name}" %>
 <% end -%>
-<h1> Add Category</h1>
+<form class="add-cat-form">
 <%= form_with model: @category, url: categories_path do |f| %>
 
     <div class="form-group">
       <div class="field">
-      <%= f.text_field :name, placeholder: "Category name"%>
+      <%= f.text_field :name, placeholder: "Category name",class:"save-field"%>
     </div>
 
       <div class="field">
@@ -17,9 +20,12 @@
         </div>
 
 </div>
+<div class="add-cat">
+    <%= f.submit "Save", class:"save-btn"%>
 
-    <%= f.submit "Save"%>
+</div>
 
 
-
+<%=link_to "Go Back " , categories_path, class:"back-link"%>
 <% end %>
+</form>

@@ -1,15 +1,39 @@
-<h1>INDEX</h1>  <%= button_to "Sign Out",  destroy_user_session_path,method: :delete%>
+<nav class="navbar"> 
 
-<% flash.each do |name, msg| -%>
-  <%= content_tag :div, msg, class: "#{name}" %>
-<% end %>
+  <span class="or-title cat-title">Categories</span>
+
+  </nav> 
+<main class="container">
+
+<div class="main-cat" >
+<p>Welcome <%= current_user.name %></p>
+ <%= link_to "Sign Out",  destroy_user_session_path,method: :delete ,class:"out-btn"%> 
+</div>
 
 
 
-<div >
+<div class="cat-list" >
+    <ul class="list">
     <% @categories.includes(:expenses).each do |category| %>
-      <%= render 'icon_group', category: category %>
-      <%= link_to category.name, category_path(category.id) %>
+    <li>
+      <span><%= render 'icon_group', category: category %></span>
+      </li>
+      <li>
+      <p>
+      <%= link_to category.name, category_path(category.id) %></p>
+      </li>
+      <li>
+      <span>Total: </span>
+      </li>
     <% end %>
   </div>
-   <%= link_to "Add Category", new_category_path%>
+  <div class="add-cat-index">
+   <%= link_to "Add Category", new_category_path, class:"cat-btn" %>
+   </div>
+<div>
+<% flash.each do |name, msg| -%>
+  <%= content_tag :div, msg, class: "#{name}" %>
+</div>
+</ul>
+<% end %>
+</main>
