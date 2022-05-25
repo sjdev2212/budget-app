@@ -10,8 +10,8 @@
   <%=form_with(model: @expense, url: category_expenses_path, method: :post, local: true) do |f| %>
 
     <div class="form-group">
-
-      <%= f.text_field :name, placeholder: "Expense name" ,class:"save-field"%>
+ <%= f.label "Expense name" %>
+      <%= f.text_field :name, placeholder: "Enter name" ,class:"save-field"%>
     </div>
 
       <div>
