@@ -1,0 +1,11 @@
+<h1> ALL EXPENSES!</h1>
+
+<% @expenses.each do |ex|%>
+<% if ex.name.nil?%>
+<span><%= 'Nothing to show yet!'%></span>
+<%else%>
+<span><%= ex.name %></span>
+<span><%= ex.amount %></span>
+<%end%>
+
+<% end%>

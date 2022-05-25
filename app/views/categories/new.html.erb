@@ -1,0 +1,35 @@
+<nav class="navbar "> 
+  <div>
+          <%=image_tag "hum.svg" ,size: "37x37",class:"hum"%>
+        </div>
+<span class="or-title cat-title">Add Category</span>
+
+  </nav> 
+
+<% flash.each do |name, msg| -%>
+  <%= content_tag :div, msg, class: "#{name}" %>
+<% end -%>
+<main class="add-cat-form">
+<%= form_with model: @category, url: categories_path do |f| %>
+
+    <div class="form-group">
+      <div class="field">
+      <%= f.label "Category name" %>
+      <%= f.text_field :name, placeholder: "Category name",class:"save-field"%>
+    </div>
+
+      <div class="field">
+          <%= f.label "Icon type" %>
+          <%= f.collection_select :icon, Category::ICONS, :to_s, :humanize %>
+        </div>
+
+</div>
+<div class="add-cat">
+    <%= f.submit "Save", class:"save-btn"%>
+
+</div>
+
+
+<%=link_to "Go Back " , categories_path, class:"back-link"%>
+<% end %>
+</main>
