@@ -4,11 +4,11 @@
 
 > ROR app to track the expenses.
 
-![screenshot](./app-creen.png)
+![screenshot](./p1.png)
  Application buit with Ruby on Rails
 
 ## Live demo
-[www.fitmate.com](https://finmate-hope.herokuapp.com/)
+[www.ExpenseTracker.com](https://gentle-headland-22451.herokuapp.com)
 
 ## Built With
 
