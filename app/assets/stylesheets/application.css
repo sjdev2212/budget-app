@@ -150,15 +150,33 @@ form {
   justify-content: space-between;
 }
 
-.cat-list {
-  margin: 1px;
+.box-a {
+  border-bottom: 1px solid #9f9fa0;
+  font-size: 20px;
+  color: #464e58;
+  font-weight: bold;
 }
 
-.list {
+.box-b {
+  font-size: 16px;
+  color: #525e6d;
+  font-weight: 400;
+  border-bottom: 1px solid #9f9fa0;
+}
+
+.box-c {
+  font-size: 16px;
+  color: #525e6d;
+  font-weight: 400;
+  border-bottom: 1px solid #9f9fa0;
+}
+
+.wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  list-style: none;
-  justify-content: space-evenly;
+  grid-gap: 10px;
+  background-color: #fff;
+  color: #444;
 }
 
 .add-cat-index {
@@ -214,4 +232,14 @@ form {
   font-size: 14px;
   font-weight: bold;
   margin-top: 20px;
+}
+
+.wrapper-flex {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.first {
+  border: 2px solid red;
 }

@@ -1,12 +1,17 @@
+<nav class="navbar"> 
+<span class="or-title cat-title">Add Expense</span>
+
+  </nav> 
+
 <% flash.each do |name, msg| -%>
   <%= content_tag :div, msg, class: "#{name}" %>
 <% end -%>
-<h1> Add Expense</h1>
+
   <%=form_with(model: @expense, url: category_expenses_path, method: :post, local: true) do |f| %>
 
     <div class="form-group">
 
-      <%= f.text_field :name, placeholder: "Expense name"%>
+      <%= f.text_field :name, placeholder: "Expense name" ,class:"save-field"%>
     </div>
 
       <div>
@@ -16,10 +21,10 @@
         <%= f.hidden_field :user_id, value: current_user.id %>
         <%= f.hidden_field :category_id, value: params[:category_id] %> 
 
+<div class="add-cat">
 
+    <%= f.submit "Save", class:"save-btn"%>
 
-    <%= f.submit "Save"%>
-
-
-
+</div>
+<%=link_to "Go Back " , categories_path, class:"back-link"%>
 <% end %>

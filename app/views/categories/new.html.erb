@@ -6,7 +6,7 @@
 <% flash.each do |name, msg| -%>
   <%= content_tag :div, msg, class: "#{name}" %>
 <% end -%>
-<form class="add-cat-form">
+<main class="add-cat-form">
 <%= form_with model: @category, url: categories_path do |f| %>
 
     <div class="form-group">
@@ -28,4 +28,4 @@
 
 <%=link_to "Go Back " , categories_path, class:"back-link"%>
 <% end %>
-</form>
+</main>
