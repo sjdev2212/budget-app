@@ -4,7 +4,7 @@
 
 > ROR app to track the expenses.
 
-![screenshot](./p1.png)
+![screenshot](.app/assets/images/p1.png)
  Application buit with Ruby on Rails
 
 ## Live demo
