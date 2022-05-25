@@ -10,7 +10,7 @@
 
 <div class="main-cat" >
 <p>Welcome <%= current_user.name %><br>
-Your total expenses are:
+Your total expenses are: $<%= current_user.all_expenses%>
 
 </p> 
  <%= link_to "Sign Out",  destroy_user_session_path,method: :delete ,class:"out-btn"%> 

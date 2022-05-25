@@ -140,10 +140,9 @@ form {
   font-size: 12px;
   padding: 10px 25px;
   border-radius: 16px;
-  border: 1px solid #000000;
-  background: #FFFFFF;
+  border: 1px solid #000;
+  background: #fff;
   text-decoration: none;
-
 }
 
 .cat-title {
@@ -191,7 +190,7 @@ form {
   display: flex;
   justify-content: center;
   position: relative;
-  top: 250px
+  top: 250px;
 }
 
 .add-cat {
@@ -241,6 +240,7 @@ form {
   font-weight: bold;
   margin-top: 20px;
 }
+
 .back-link-show {
   color: #434b54;
   text-decoration: none;
@@ -248,9 +248,7 @@ form {
   font-weight: bold;
   position: relative;
   top: 250px;
-
 }
-
 
 .wrapper-flex {
   display: grid;
@@ -258,44 +256,48 @@ form {
   grid-gap: 10px;
 }
 
-
 .list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   list-style: none;
   align-items: baseline;
-  margin:50px 10px;
-  padding: 0; 
+  margin: 50px 10px;
+  padding: 0;
 }
-.icon-1{
-position: relative;
-bottom: 20px;
+
+.icon-1 {
+  position: relative;
+  bottom: 20px;
 }
+
 li {
-margin: 0;
-padding: 0;
+  margin: 0;
+  padding: 0;
   border-bottom: 2px solid black;
   height: 50px;
 }
-.cat-list{
+
+.cat-list {
   margin: 0;
   padding: 0;
 }
-.total {
- position: relative;
- top: 18px;
-text-decoration: none;
-color:#434b54 ;
-}
-.hum{
-  position: relative;
-  right:31vw;
 
-}
-@media screen and (min-width: 610px) {
-.hum{
+.total {
   position: relative;
-  right:31vw;
-  display: none;
+  top: 18px;
+  text-decoration: none;
+  color: #434b54;
 }
-   }
+
+.hum {
+  position: relative;
+  right: 31vw;
+}
+
+@media screen and (min-width: 610px) {
+  .hum {
+    position: relative;
+    right: 31vw;
+    display: none;
+  }
+}
