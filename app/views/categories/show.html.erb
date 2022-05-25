@@ -1,4 +1,8 @@
 <nav class="navbar"> 
+   <div class="hum">
+          <%=image_tag "hum.svg" ,size: "37x37"%>
+        </div>
+
 
   <span class="or-title cat-title"><%= @category.name%></span>
 
@@ -26,4 +30,4 @@
 <div class="add-cat-index">
 <%= link_to "Add Expense", new_category_expense_path(@category.id),class:"cat-btn" %>
 </div>
-<%=link_to "Go Back " , categories_path, class:"back-link"%>
+<%=link_to "Go Back " , categories_path, class:"back-link-show"%>
