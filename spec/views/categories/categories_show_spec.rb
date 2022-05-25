@@ -1,4 +1,3 @@
-
 require 'rails_helper'
 
 RSpec.describe 'Categories show page', type: :system do
@@ -21,9 +20,9 @@ RSpec.describe 'Categories show page', type: :system do
     end
 
     it 'should render a add expensebutton' do
-        expect(page).to have_link('Add Expense')
-      end
-  
+      expect(page).to have_link('Add Expense')
+    end
+
     it 'should have a go back link' do
       expect(page).to have_link('Go Back')
     end

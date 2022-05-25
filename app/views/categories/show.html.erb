@@ -9,10 +9,20 @@
   </nav> 
 
 
-<br>
-<br>
-<br>
 
+
+
+    <div class="expense" >
+      <h2 >Expenses for <%= @category.name %><h2>
+   
+        <h3 class="number"> $
+        <% if @category.total_expenses.positive? %>
+        <%= @category.total_expenses %>0
+        <% else %>
+          <%= @category.total_expenses %>0
+        <% end %>
+        </h3>
+     
 
 
 <div class="wrapper">

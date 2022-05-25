@@ -22,16 +22,14 @@ RSpec.describe 'Add expense page', type: :feature do
     end
 
     it 'should have amount input field' do
-        expect(page).to have_text('Amount')
-      end
-  
+      expect(page).to have_text('Amount')
+    end
 
     it 'should have a save button' do
       expect(page).to have_button('Save')
     end
     it 'should have ago back link' do
-        expect(page).to have_link('Go Back')
-      end
-
+      expect(page).to have_link('Go Back')
+    end
   end
 end

@@ -1,4 +1,3 @@
-
 require 'rails_helper'
 
 RSpec.describe 'Categories index page', type: :system do
@@ -21,11 +20,11 @@ RSpec.describe 'Categories index page', type: :system do
     end
 
     it 'should render a Log Out button' do
-        expect(page).to have_link('Sign Out')
-      end
-      it 'should display the icon' do
-        expect(page).to have_css('img')
-      end
+      expect(page).to have_link('Sign Out')
+    end
+    it 'should display the icon' do
+      expect(page).to have_css('img')
+    end
 
     it 'should have an add category button' do
       expect(page).to have_link('Add Category')

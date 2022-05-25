@@ -30,7 +30,7 @@ RSpec.describe 'Add category page', type: :feature do
     it 'Should add successfully' do
       fill_in 'Category name', with: 'Bills'
       click_button 'Save'
-      expect(page.current_path).to have_content("/categories")
+      expect(page.current_path).to have_content('/categories')
     end
   end
 end

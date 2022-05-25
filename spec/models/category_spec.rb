@@ -5,8 +5,7 @@ RSpec.describe Category, type: :model do
     Category.new(
       user_id: 1,
       name: 'Bills',
-      icon: 'bills',
-   
+      icon: 'bills'
     )
   end
   before { subject.save }
@@ -19,6 +18,4 @@ RSpec.describe Category, type: :model do
     subject.icon = nil
     expect(subject).to_not be_valid
   end
-
-
 end

@@ -7,7 +7,6 @@ RSpec.describe Expense, type: :model do
       category_id: 1,
       name: 'Cable',
       amount: 50
-   
     )
   end
   before { subject.save }
@@ -24,6 +23,4 @@ RSpec.describe Expense, type: :model do
     subject.amount = -15
     expect(subject).to_not be_valid
   end
-
-
 end

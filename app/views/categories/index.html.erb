@@ -9,11 +9,14 @@
 <main class="container">
 
 <div class="main-cat" >
+<div class="welcome">
 <p>Welcome <%= current_user.name %><br>
-Your total expenses are: $<%= current_user.all_expenses%>
-
+Your total expenses are: $<%= current_user.all_expenses%>0
 </p> 
+</div>
+<div>
  <%= link_to "Sign Out",  destroy_user_session_path,method: :delete ,class:"out-btn"%> 
+ </div>
 </div>
 
 
