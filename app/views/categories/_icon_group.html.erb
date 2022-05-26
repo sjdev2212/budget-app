@@ -1,0 +1,36 @@
+
+<div >
+  <div >
+    <%case category.icon %>
+      <%when "entertainment"%>
+        <div >
+          <%=image_tag "entertainment.svg",size: "48x48" %>
+        </div>
+        <%when "groceries"%>
+        <div >
+          <%=image_tag "groceries.svg" ,size: "46x46"%>
+        </div>
+          <%when "bills"%>
+        <div >
+          <%=image_tag "bills.svg" ,size: "49x50"%>
+        </div>
+             <%when "education"%>
+        <div >
+          <%=image_tag "education.svg" ,size: "44x44"%>
+        </div>
+              <%when "clothing"%>
+        <div >
+          <%=image_tag "clothing.svg" ,size: "52x52"%>
+        </div>
+               <%when "transportation"%>
+        <div >
+          <%=image_tag "transportation.svg" ,size: "50x50"%>
+        </div>
+                <%when "extras"%>
+        <div >
+          <%=image_tag "extras.svg" ,size: "45x45"%>
+        </div>
+
+
+
+    <% end %>

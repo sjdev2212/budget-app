@@ -1,0 +1,48 @@
+<nav class="navbar"> 
+   <div>
+          <%=image_tag "hum.svg" ,size: "37x37",class:"hum"%>
+        </div>
+
+  <span class="or-title cat-title">Categories</span>
+
+  </nav> 
+<main class="container">
+
+<div class="main-cat" >
+<div class="welcome">
+<p>Welcome <%= current_user.name %><br>
+Your total expenses are: $<%= current_user.all_expenses%>0
+</p> 
+</div>
+<div>
+ <%= link_to "Sign Out",  destroy_user_session_path,method: :delete ,class:"out-btn"%> 
+ </div>
+</div>
+
+
+
+<div class="cat-list" >
+    <ul class="list">
+    <% @categories.includes(:expenses).each do |category| %>
+    <li>
+      <span  class="icon-1"><%= render 'icon_group', category: category %></span>
+      </li>
+      <li class="name-cat">
+     
+      <%= link_to category.name, category_path(category.id),class:"total" %>
+      </li>
+      <li>
+      <span class="total">Total: $<%= category.total_expenses%> </span>
+      </li>
+    <% end %>
+  </div>
+  <div class="add-cat-index">
+   <%= link_to "Add Category", new_category_path, class:"cat-btn" %>
+   </div>
+</ul>
+</main>
+<div>
+<% flash.each do |name, msg| -%>
+  <%= content_tag :div, msg, class: "#{name}" %>
+<% end %>
+</div>

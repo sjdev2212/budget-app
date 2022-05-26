@@ -1,0 +1,34 @@
+<nav class="navbar"> 
+   <div>
+          <%=image_tag "hum.svg" ,size: "37x37",class:"hum"%>
+        </div>
+
+  <span class="or-title cat-title">Add Expense</span>
+
+  </nav> 
+
+<% flash.each do |name, msg| -%>
+  <%= content_tag :div, msg, class: "#{name}" %>
+<% end -%>
+
+  <%=form_with(model: @expense, url: category_expenses_path, method: :post, local: true) do |f| %>
+
+    <div class="form-group">
+ <%= f.label "Expense name" %>
+      <%= f.text_field :name, placeholder: "Enter name" ,class:"save-field"%>
+    </div>
+
+      <div>
+          <%= f.label "Amount" %>
+          <%= f.number_field :amount, placeholder: "Enter Amount"%>
+        </div>
+        <%= f.hidden_field :user_id, value: current_user.id %>
+        <%= f.hidden_field :category_id, value: params[:category_id] %> 
+
+<div class="add-cat">
+
+    <%= f.submit "Save", class:"save-btn"%>
+
+</div>
+<%=link_to "Go Back " , categories_path, class:"back-link"%>
+<% end %>
